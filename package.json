@@ -7,31 +7,34 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
   ],
   "keywords": [
-    "text",
+    "ip",
+    "ipv6",
+    "ipv4",
     "regex",
     "regexp",
     "re",
     "match",
     "test",
     "find",
+    "text",
     "pattern",
-    "ip",
     "internet",
     "protocol",
     "address",
     "validate",
+    "detect",
     "check",
     "is",
     "string"
@@ -40,6 +43,10 @@
     "ip-regex": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

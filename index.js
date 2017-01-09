@@ -1,14 +1,6 @@
 'use strict';
-var ipRegex = require('ip-regex');
+const ipRegex = require('ip-regex');
 
-var ip = module.exports = function (str) {
-	return ipRegex({exact: true}).test(str);
-};
-
-ip.v4 = function (str) {
-	return ipRegex.v4({exact: true}).test(str);
-};
-
-ip.v6 = function (str) {
-	return ipRegex.v6({exact: true}).test(str);
-};
+const isIp = module.exports = x => ipRegex({exact: true}).test(x);
+isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
+isIp.v6 = x => ipRegex.v6({exact: true}).test(x);

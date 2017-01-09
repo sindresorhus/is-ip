@@ -5,7 +5,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save is-ip
 ```
 
@@ -13,7 +13,7 @@ $ npm install --save is-ip
 ## Usage
 
 ```js
-var isIp = require('is-ip');
+const isIp = require('is-ip');
 
 isIp('192.168.0.1');
 //=> true
@@ -28,19 +28,24 @@ isIp.v4('1:2:3:4:5:6:7:8');
 
 ## API
 
-### isIp(string)
+### isIp(input)
 
-Check if a string is IPv4 or IPv6.
+Check if `input` is IPv4 or IPv6.
 
-### isIp.v4(string)
+### isIp.v4(input)
 
-Check if a string is IPv4.
+Check if `input` is IPv4.
 
-### isIp.v6(string)
+### isIp.v6(input)
 
-Check if a string is IPv6.
+Check if `input` is IPv6.
+
+
+## Related
+
+- [ip-regex](https://github.com/sindresorhus/ip-regex) - Regular expression for matching IP addresses
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
