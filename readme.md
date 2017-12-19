@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save is-ip
+$ npm install is-ip
 ```
 
 
