@@ -44,6 +44,8 @@ Check if `input` is IPv6.
 ## Related
 
 - [ip-regex](https://github.com/sindresorhus/ip-regex) - Regular expression for matching IP addresses
+- [is-cidr](https://github.com/silverwind/is-cidr) - Check if a string is an IP address in CIDR notation
+- [cidr-regex](https://github.com/silverwind/cidr-regex) - Regular expression for matching IP addresses in CIDR notation
 
 
 ## License
