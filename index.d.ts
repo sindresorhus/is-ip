@@ -17,6 +17,14 @@ declare const isIp: {
 
 	/**
 	Check if `string` is IPv4.
+
+	@example
+	```
+	import isIp = require('is-ip');
+
+	isIp.v4('192.168.0.1');
+	//=> true
+	```
 	*/
 	v4(string: string): boolean;
 
