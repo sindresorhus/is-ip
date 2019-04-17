@@ -28,17 +28,17 @@ isIp.v4('1:2:3:4:5:6:7:8');
 
 ## API
 
-### isIp(input)
+### isIp(string)
 
-Check if `input` is IPv4 or IPv6.
+Check if `string` is IPv4 or IPv6.
 
-### isIp.v4(input)
+### isIp.v4(string)
 
-Check if `input` is IPv4.
+Check if `string` is IPv4.
 
-### isIp.v6(input)
+### isIp.v6(string)
 
-Check if `input` is IPv6.
+Check if `string` is IPv6.
 
 
 ## Related

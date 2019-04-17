@@ -1,11 +1,11 @@
 import test from 'ava';
-import m from '.';
+import isIp from '.';
 
-test(t => {
-	t.true(m('192.168.0.1'));
-	t.true(m('1:2:3:4:5:6:7:8'));
-	t.true(m.v4('192.168.0.1'));
-	t.true(m.v6('1:2:3:4:5:6:7:8'));
-	t.true(m.v6('::1'));
-	t.true(m('::1'));
+test('main', t => {
+	t.true(isIp('192.168.0.1'));
+	t.true(isIp('1:2:3:4:5:6:7:8'));
+	t.true(isIp.v4('192.168.0.1'));
+	t.true(isIp.v6('1:2:3:4:5:6:7:8'));
+	t.true(isIp.v6('::1'));
+	t.true(isIp('::1'));
 });
