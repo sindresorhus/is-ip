@@ -40,6 +40,25 @@ declare const isIp: {
 	```
 	*/
 	v6(string: string): boolean;
+
+	/**
+	Return `6` if `string` is IPv6, `4` if `string` is IPv4 or `undefined` if `string` is neither.
+
+	@example
+	```
+	import isIp = require('is-ip');
+
+	isIp.version('192.168.0.1');
+	//=> 4
+
+	isIp.version('1:2:3:4:5:6:7:8');
+	//=> 6
+
+	isIp.version('abc');
+	//=> undefined
+	```
+	*/
+	version(string: string): 4 | 6 | undefined;
 };
 
 export = isIp;
