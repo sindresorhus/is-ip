@@ -42,7 +42,7 @@ declare const isIp: {
 	v6(string: string): boolean;
 
 	/**
-	Return `6` if `string` is IPv6, `4` if `string` is IPv4 or `undefined` if `string` is neither.
+	@returns `6` if `string` is IPv6, `4` if `string` is IPv4, or `undefined` if `string` is neither.
 
 	@example
 	```
