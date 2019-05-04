@@ -23,16 +23,6 @@ isIp('1:2:3:4:5:6:7:8');
 
 isIp.v4('1:2:3:4:5:6:7:8');
 //=> false
-
-isIp.version('192.168.0.1');
-//=> 4
-
-isIp.version('1:2:3:4:5:6:7:8');
-//=> 6
-
-isIp.version('abc');
-//=> undefined
-
 ```
 
 
@@ -52,7 +42,19 @@ Check if `string` is IPv6.
 
 ### isIp.version(string)
 
-Return `6` if `string` is IPv6, `4` if `string` is IPv4 or `undefined` if `string` is neither.
+Returns `6` if `string` is IPv6, `4` if `string` is IPv4, or `undefined` if `string` is neither.
+
+```js
+isIp.version('192.168.0.1');
+//=> 4
+
+isIp.version('1:2:3:4:5:6:7:8');
+//=> 6
+
+isIp.version('abc');
+//=> undefined
+```
+
 
 ## Related
 
