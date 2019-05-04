@@ -40,6 +40,21 @@ Check if `string` is IPv4.
 
 Check if `string` is IPv6.
 
+### isIp.version(string)
+
+Returns `6` if `string` is IPv6, `4` if `string` is IPv4, or `undefined` if `string` is neither.
+
+```js
+isIp.version('192.168.0.1');
+//=> 4
+
+isIp.version('1:2:3:4:5:6:7:8');
+//=> 6
+
+isIp.version('abc');
+//=> undefined
+```
+
 
 ## Related
 
