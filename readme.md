@@ -1,4 +1,4 @@
-# is-ip [![Build Status](https://travis-ci.org/sindresorhus/is-ip.svg?branch=master)](https://travis-ci.org/sindresorhus/is-ip)
+# is-ip
 
 > Check if a string is an IP address
 
