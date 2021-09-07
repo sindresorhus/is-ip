@@ -2,6 +2,7 @@
 
 > Check if a string is an IP address
 
+If you only need this for Node.js and don't care about browser support, you may want to use [`net.isIP`](https://nodejs.org/api/net.html#net_net_isip_input) instead. Note that it returns an integer instead of a boolean.
 
 ## Install
 
