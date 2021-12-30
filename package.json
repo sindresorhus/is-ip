@@ -9,8 +9,9 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "sindresorhus.com"
 	},
+	"type": "module",
 	"engines": {
-		"node": ">=8"
+		"node": ">=12.20"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -43,8 +44,16 @@
 		"ip-regex": "^4.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"ava": "^3.15.0",
+		"tsd": "^0.19.1",
+		"xo": "^0.47.0"
+	},
+	"tsd": {
+		"compilerOptions": {
+			"lib": [
+				"dom",
+				"es2019"
+			]
+		}
 	}
 }

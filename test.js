@@ -1,5 +1,5 @@
 import test from 'ava';
-import isIp from '.';
+import isIp from './index.js';
 
 test('main', t => {
 	t.true(isIp('192.168.0.1'));

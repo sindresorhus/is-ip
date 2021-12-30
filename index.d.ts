@@ -4,7 +4,7 @@ declare const isIp: {
 
 	@example
 	```
-	import isIp = require('is-ip');
+        import isIp from 'is-ip';
 
 	isIp('192.168.0.1');
 	//=> true
@@ -20,7 +20,7 @@ declare const isIp: {
 
 	@example
 	```
-	import isIp = require('is-ip');
+        import isIp from 'is-ip';
 
 	isIp.v4('192.168.0.1');
 	//=> true
@@ -33,7 +33,7 @@ declare const isIp: {
 
 	@example
 	```
-	import isIp = require('is-ip');
+	import isIp from 'is-ip';
 
 	isIp.v6('1:2:3:4:5:6:7:8');
 	//=> true
@@ -46,7 +46,7 @@ declare const isIp: {
 
 	@example
 	```
-	import isIp = require('is-ip');
+	import isIp from 'is-ip';
 
 	isIp.version('192.168.0.1');
 	//=> 4
@@ -61,4 +61,4 @@ declare const isIp: {
 	version(string: string): 4 | 6 | undefined;
 };
 
-export = isIp;
+export default isIp;

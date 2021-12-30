@@ -14,7 +14,7 @@ $ npm install is-ip
 ## Usage
 
 ```js
-const isIp = require('is-ip');
+import isIp from 'is-ip';
 
 isIp('192.168.0.1');
 //=> true

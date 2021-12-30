@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import isIp = require('.');
+import isIp from './index.js';
 
 expectType<boolean>(isIp('127.0.0.1'));
 expectType<boolean>(isIp.v4('127.0.0.1'));
