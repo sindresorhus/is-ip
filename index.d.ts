@@ -1,64 +1,60 @@
-declare const isIp: {
-	/**
-	Check if `string` is IPv4 or IPv6.
+/**
+Check if `string` is IPv6 or IPv4.
 
-	@example
-	```
-	import isIp = require('is-ip');
+@example
+```
+import {isIP} from 'is-ip';
 
-	isIp('192.168.0.1');
-	//=> true
+isIP('1:2:3:4:5:6:7:8');
+//=> true
 
-	isIp('1:2:3:4:5:6:7:8');
-	//=> true
-	```
-	*/
-	(string: string): boolean;
+isIP('192.168.0.1');
+//=> true
+```
+*/
+export function isIP(string: string): boolean; // eslint-disable-line @typescript-eslint/naming-convention
 
-	/**
-	Check if `string` is IPv4.
+/**
+Check if `string` is IPv6.
 
-	@example
-	```
-	import isIp = require('is-ip');
+@example
+```
+import {isIPv6} from 'is-ip';
 
-	isIp.v4('192.168.0.1');
-	//=> true
-	```
-	*/
-	v4(string: string): boolean;
+isIPv6('1:2:3:4:5:6:7:8');
+//=> true
+```
+*/
+export function isIPv6(string: string): boolean; // eslint-disable-line @typescript-eslint/naming-convention
 
-	/**
-	Check if `string` is IPv6.
+/**
+Check if `string` is IPv4.
 
-	@example
-	```
-	import isIp = require('is-ip');
+@example
+```
+import {isIPv4} from 'is-ip';
 
-	isIp.v6('1:2:3:4:5:6:7:8');
-	//=> true
-	```
-	*/
-	v6(string: string): boolean;
+isIPv4('192.168.0.1');
+//=> true
+```
+*/
+export function isIPv4(string: string): boolean; // eslint-disable-line @typescript-eslint/naming-convention
 
-	/**
-	@returns `6` if `string` is IPv6, `4` if `string` is IPv4, or `undefined` if `string` is neither.
+/**
+@returns `6` if `string` is IPv6, `4` if `string` is IPv4, or `undefined` if `string` is neither.
 
-	@example
-	```
-	import isIp = require('is-ip');
+@example
+```
+import {ipVersion} from 'is-ip';
 
-	isIp.version('192.168.0.1');
-	//=> 4
+ipVersion('1:2:3:4:5:6:7:8');
+//=> 6
 
-	isIp.version('1:2:3:4:5:6:7:8');
-	//=> 6
+ipVersion('192.168.0.1');
+//=> 4
 
-	isIp.version('abc');
-	//=> undefined
-	```
-	*/
-	version(string: string): 4 | 6 | undefined;
-};
-
-export = isIp;
+ipVersion('abc');
+//=> undefined
+```
+*/
+export function ipVersion(string: string): 6 | 4 | undefined;

@@ -1,9 +1,17 @@
-'use strict';
-const ipRegex = require('ip-regex');
+import ipRegex from 'ip-regex';
 
-const isIp = string => ipRegex({exact: true}).test(string);
-isIp.v4 = string => ipRegex.v4({exact: true}).test(string);
-isIp.v6 = string => ipRegex.v6({exact: true}).test(string);
-isIp.version = string => isIp(string) ? (isIp.v4(string) ? 4 : 6) : undefined;
+export function isIP(string) {
+	return ipRegex({exact: true}).test(string);
+}
 
-module.exports = isIp;
+export function isIPv6(string) {
+	return ipRegex.v6({exact: true}).test(string);
+}
+
+export function isIPv4(string) {
+	return ipRegex.v4({exact: true}).test(string);
+}
+
+export function ipVersion(string) {
+	return isIP(string) ? (isIPv6(string) ? 6 : 4) : undefined;
+}
