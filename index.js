@@ -9,17 +9,35 @@ const options = {
 };
 
 export function isIP(string) {
-	return isMatch(ipRegex({exact: true}), string.slice(0, maxIPv6Length), options);
+	if (string.length > maxIPv6Length) {
+		return false;
+	}
+
+	return isMatch(ipRegex({exact: true}), string, options);
 }
 
 export function isIPv6(string) {
-	return isMatch(ipRegex.v6({exact: true}), string.slice(0, maxIPv6Length), options);
+	if (string.length > maxIPv6Length) {
+		return false;
+	}
+
+	return isMatch(ipRegex.v6({exact: true}), string, options);
 }
 
 export function isIPv4(string) {
-	return isMatch(ipRegex.v4({exact: true}), string.slice(0, maxIPv4Length), options);
+	if (string.length > maxIPv4Length) {
+		return false;
+	}
+
+	return isMatch(ipRegex.v4({exact: true}), string, options);
 }
 
 export function ipVersion(string) {
-	return isIP(string) ? (isIPv6(string) ? 6 : 4) : undefined;
+	if (isIPv6(string)) {
+		return 6;
+	}
+
+	if (isIPv4(string)) {
+		return 4;
+	}
 }
